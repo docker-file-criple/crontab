@@ -1,0 +1,7 @@
+#!/bin/bash
+
+mkdir -p /var/log/droplocation_clean/
+touch /tmp/test
+SCRIPT='/tmp/test'
+echo "* 0 * * * ${SCRIPT}" | crontab
+/usr/sbin/cron -f
