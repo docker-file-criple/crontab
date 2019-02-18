@@ -7,6 +7,6 @@ RUN apt-get update \
 
 COPY start_cron /start_cron
 
-RUN chmod +x /start_cron \
+RUN chmod +x /start_cron
 
 ENTRYPOINT ["/start_cron"]
