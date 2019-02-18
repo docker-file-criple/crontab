@@ -2,6 +2,8 @@
 
 mkdir -p /var/log/droplocation_clean/
 touch /tmp/test
-SCRIPT='/tmp/test'
+if [ "$SCRIPT" == "" ]; then
+  SCRIPT='/tmp/test'
+fi
 echo "* 0 * * * ${SCRIPT}" | crontab
 /usr/sbin/cron -f
